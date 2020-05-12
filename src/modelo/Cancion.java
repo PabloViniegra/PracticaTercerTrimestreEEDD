@@ -12,15 +12,7 @@ public class Cancion {
 	private int idArtista;
 	private int idDisco;
 	
-	//Constructor con Parámetros
-	public Cancion (int idCancion,String nombreCancion,int duracion,Genero genero,int idArtista,int idDisco) {
-		this.idCancion=idCancion;
-		this.nombreCancion=nombreCancion;
-		this.duracion=duracion;
-		this.genero=genero;
-		this.idArtista=idArtista;
-		this.idDisco=idDisco;
-	}
+
 	
 	//Getters and Setters
 	public int getIdCancion() {
