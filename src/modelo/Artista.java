@@ -7,13 +7,7 @@ public class Artista {
 	private int anioCreacion;
 	private byte numIntegrantes;
 	
-	//Constructor por parámetros
-	public Artista (int idArtista,String nombreArtista,int anioCreacion,byte numIntegrantes) {
-		this.idArtista=idArtista;
-		this.nombreArtista=nombreArtista;
-		this.anioCreacion=anioCreacion;
-		this.numIntegrantes=numIntegrantes;
-	}
+	
 	
 	//Getters and Setters
 	public int getIdArtista() {

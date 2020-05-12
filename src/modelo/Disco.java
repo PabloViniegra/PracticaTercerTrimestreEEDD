@@ -6,13 +6,6 @@ public class Disco {
 	private float precio;
 	private String nombreDisco;
 	
-	//Constructor por parámetros
-	public Disco (int idDisco, String imgPortada,float precio,String nombreDisco) {
-		this.idDisco=idDisco;
-		this.imgPortada=imgPortada;
-		this.precio=precio;
-		this.nombreDisco=nombreDisco;
-	}
 	
 	//Getters and Setters
 	public int getIdDisco() {
