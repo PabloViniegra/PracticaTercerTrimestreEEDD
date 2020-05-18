@@ -501,7 +501,8 @@ public class GestorBBDD {
 			Statement consulta = conn.createStatement();
 			String query = "update artistas set NombreArt='" + a.getNombreArtista() +
 					"',AñoCreacion=" + a.getAnioCreacion() + ",NumIntegrantes=" +
-					a.getNumIntegrantes() + "where NombreArt='" + aux+ "'";
+					a.getNumIntegrantes() + " where NombreArt='" + aux + "'";
+			
 			int valor = consulta.executeUpdate(query);
 			
 			if (valor==1)

@@ -26,7 +26,7 @@ public class Artista {
 		return anioCreacion;
 	}
 	public void setAnioCreacion(int anioCreacion) {
-		anioCreacion = anioCreacion;
+		this.anioCreacion = anioCreacion;
 	}
 	public byte getNumIntegrantes() {
 		return numIntegrantes;

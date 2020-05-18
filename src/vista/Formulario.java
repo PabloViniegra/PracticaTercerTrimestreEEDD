@@ -95,7 +95,7 @@ public class Formulario {
 				migestor.mostrarArtistas();
 				System.out.print("Introduzca el nombre del artista que quiere borrar: ");
 				String nombreArtista = sc.nextLine();
-				migestor.borrarCancionBBDD(nombreArtista);
+				migestor.borrarArtistaBBDD(nombreArtista);
 				break;
 			case 9:
 				migestor.mostrarDiscos();
@@ -124,11 +124,11 @@ public class Formulario {
 
 		System.out.print("Dime el nombre de la canción: ");
 		micancion.setNombreCancion(sc.nextLine());
-
-		System.out.print("¿Cuánto dura?");
+		//TODO asegurarse que el usuario meta un número
+		System.out.print("¿Cuánto dura? en segundos");
 		micancion.setDuracion(sc.nextInt());
 		sc.nextLine();
-
+		//TODO: Convertir en un Switch, si el usuario no ha elegido bien el género que lo vuelva a pedir.
 		System.out.print(
 				"Cuál es su género? (ROCK,FOLK,POP,REGGAETON,ELECTRÓNICA,JAZZ,METAL,BLUES,FUNK,ALTERNATIVO,CLASICA,AMBIENTE):");
 		String respuesta = sc.nextLine();
@@ -181,10 +181,11 @@ public class Formulario {
 
 		System.out.print("Dime el nombre del artista: ");
 		miartista.setNombreArtista(sc.nextLine());
-
+		
 		System.out.print("Año en el que empezó/empezaron: ");
 		miartista.setAnioCreacion(sc.nextInt());
-
+		
+		
 		System.out.print("Número de integrantes: ");
 		miartista.setNumIntegrantes(sc.nextByte());
 
@@ -225,6 +226,7 @@ public class Formulario {
 		
 		System.out.print("Nueva duración: ");
 		c.setDuracion(sc.nextInt());
+		sc.nextLine();
 		
 		System.out.print("¿Cuál es su nuevo género? (ROCK,FOLK,POP,REGGAETON,ELECTRÓNICA,JAZZ,METAL,BLUES,FUNK,ALTERNATIVO,CLASICA,AMBIENTE):");
 		String respuesta = sc.nextLine();
@@ -274,10 +276,11 @@ public class Formulario {
 	public Artista modificarArtista (Artista a) {
 		Scanner sc = new Scanner (System.in);
 		GestorBBDD gestor = new GestorBBDD();
+		sc.nextLine();
 		
 		System.out.print("Nuevo nombre del Artista: ");
 		a.setNombreArtista(sc.nextLine());
-		sc.nextLine();
+		//sc.nextLine();
 		
 		System.out.print("Nuevo año en el que empezaron: ");
 		a.setAnioCreacion(sc.nextInt());
