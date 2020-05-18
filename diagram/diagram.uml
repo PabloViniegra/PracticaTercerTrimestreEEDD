@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ulzdAJkhEeqHYLLvYwJbdg" name="diagram">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ulzdAJkhEeqHYLLvYwJbdg" name="diagram">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_u7YrcJkhEeqHYLLvYwJbdg">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -133,6 +133,8 @@
     <ownedAttribute xmi:type="uml:Property" xmi:id="_NbZ0AJkpEeqHYLLvYwJbdg" name="idDisco" visibility="private">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_osdWIplEEeqHYLLvYwJbdg" name="artista" type="_yb_rcJkhEeqHYLLvYwJbdg" association="_oscvEJlEEeqHYLLvYwJbdg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_roQY4plEEeqHYLLvYwJbdg" name="disco" type="_zIiBUJkhEeqHYLLvYwJbdg" association="_roKSQJlEEeqHYLLvYwJbdg"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_o9urIJkqEeqHYLLvYwJbdg" name="getIdCancion">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_mlCgAJkrEeqHYLLvYwJbdg" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
@@ -219,16 +221,51 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="__kSYkJk7EeqHYLLvYwJbdg" name="insertarCancionBBDD">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_PinyoJk-EeqHYLLvYwJbdg" name="c" type="_zZToQJkhEeqHYLLvYwJbdg"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="__xlNsJk7EeqHYLLvYwJbdg" name="Operation7"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_AF6e8Jk8EeqHYLLvYwJbdg" name="Operation8"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_An2HUJk8EeqHYLLvYwJbdg" name="Operation9"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_A1e6sJk8EeqHYLLvYwJbdg" name="Operation10"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_BBy4YJk8EeqHYLLvYwJbdg" name="Operation11"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_BN2XYJk8EeqHYLLvYwJbdg" name="Operation12"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_Bb1wEJk8EeqHYLLvYwJbdg" name="Operation13"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_BnfmcJk8EeqHYLLvYwJbdg" name="Operation14"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ByFs4Jk8EeqHYLLvYwJbdg" name="Operation15"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_B9nAYJk8EeqHYLLvYwJbdg" name="Operation16"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__xlNsJk7EeqHYLLvYwJbdg" name="insertarArtistaBBDD">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_o-WmIJk-EeqHYLLvYwJbdg" name="a" type="_yb_rcJkhEeqHYLLvYwJbdg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_AF6e8Jk8EeqHYLLvYwJbdg" name="insertarDiscoBBDD">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_uMfe8Jk-EeqHYLLvYwJbdg" name="d" type="_zIiBUJkhEeqHYLLvYwJbdg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_An2HUJk8EeqHYLLvYwJbdg" name="borrarCancionBBDD">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_0EqzQJk-EeqHYLLvYwJbdg" name="aux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_A1e6sJk8EeqHYLLvYwJbdg" name="mostrarCanciones"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BBy4YJk8EeqHYLLvYwJbdg" name="borrarArtistaBBDD">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_5MzKsJk-EeqHYLLvYwJbdg" name="aux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BN2XYJk8EeqHYLLvYwJbdg" name="borrarDiscoBBDD">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_8VcWoJk-EeqHYLLvYwJbdg" name="d">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Bb1wEJk8EeqHYLLvYwJbdg" name="mostrarTodo">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Gg7TMJk_EeqHYLLvYwJbdg" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://ECORE_METAMODEL_LIBRARY/Ecore.uml#_SeWij8X_EduPJbEsMYXjUQ"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BnfmcJk8EeqHYLLvYwJbdg" name="modificarCancionBBDD">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_M2EQUJk_EeqHYLLvYwJbdg" name="aux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_PqKvoJk_EeqHYLLvYwJbdg" name="c" type="_zZToQJkhEeqHYLLvYwJbdg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ByFs4Jk8EeqHYLLvYwJbdg" name="modificarArtista">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TpwKoJk_EeqHYLLvYwJbdg" name="aux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_WSThQJk_EeqHYLLvYwJbdg" name="a" type="_yb_rcJkhEeqHYLLvYwJbdg"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_B9nAYJk8EeqHYLLvYwJbdg" name="modificarDisco">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_amYlkJk_EeqHYLLvYwJbdg" name="aux">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_cJPfcJk_EeqHYLLvYwJbdg" name="d" type="_zIiBUJkhEeqHYLLvYwJbdg"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_j8fpEJkuEeqHYLLvYwJbdg" name="Connection"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_mIip4JkuEeqHYLLvYwJbdg" name="Interaccion">
@@ -357,5 +394,88 @@
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_rgEvQJkuEeqHYLLvYwJbdg" name="Class10"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rgEvQJkuEeqHYLLvYwJbdg" name="Main">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Z6xK0JlBEeqHYLLvYwJbdg" name="main">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_dpNygJlBEeqHYLLvYwJbdg" name="[]args">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_7Nw1gJlBEeqHYLLvYwJbdg" name="Formulario">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_qo7_AJlGEeqHYLLvYwJbdg" name="disco" type="_zIiBUJkhEeqHYLLvYwJbdg" association="_qo6w4JlGEeqHYLLvYwJbdg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qpG-IJlGEeqHYLLvYwJbdg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qpG-IZlGEeqHYLLvYwJbdg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2iBs4plGEeqHYLLvYwJbdg" name="artista" type="_yb_rcJkhEeqHYLLvYwJbdg" association="_2iAewJlGEeqHYLLvYwJbdg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2iHMcJlGEeqHYLLvYwJbdg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2iHMcZlGEeqHYLLvYwJbdg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6iGQEplGEeqHYLLvYwJbdg" name="cancion" type="_zZToQJkhEeqHYLLvYwJbdg" association="_6iEa4JlGEeqHYLLvYwJbdg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6iG3IJlGEeqHYLLvYwJbdg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6iG3IZlGEeqHYLLvYwJbdg" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-MtS4JlBEeqHYLLvYwJbdg" name="menu"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_B7QoQJlCEeqHYLLvYwJbdg" name="insertarCancion">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_IPQV4JlCEeqHYLLvYwJbdg" type="_zZToQJkhEeqHYLLvYwJbdg" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LKn60JlCEeqHYLLvYwJbdg" name="insertarArtista">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_OVrhkJlCEeqHYLLvYwJbdg" type="_yb_rcJkhEeqHYLLvYwJbdg" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_RN5r4JlCEeqHYLLvYwJbdg" name="insertarDiscos">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_TGMqQJlCEeqHYLLvYwJbdg" type="_zIiBUJkhEeqHYLLvYwJbdg" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_WWk14JlCEeqHYLLvYwJbdg" name="modificarCancion">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ajW_YJlCEeqHYLLvYwJbdg" name="c" type="_zZToQJkhEeqHYLLvYwJbdg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_h0Ez8JlCEeqHYLLvYwJbdg" type="_zZToQJkhEeqHYLLvYwJbdg" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_kegZ4JlCEeqHYLLvYwJbdg" name="modificarArtista">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_moI_4JlCEeqHYLLvYwJbdg" name="a" type="_yb_rcJkhEeqHYLLvYwJbdg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_pSftUJlCEeqHYLLvYwJbdg" type="_yb_rcJkhEeqHYLLvYwJbdg" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_sC3jMJlCEeqHYLLvYwJbdg" name="modificarDisco">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vYk6wJlCEeqHYLLvYwJbdg" name="d" type="_zIiBUJkhEeqHYLLvYwJbdg"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_xzv8sJlCEeqHYLLvYwJbdg" type="_zIiBUJkhEeqHYLLvYwJbdg" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_oscvEJlEEeqHYLLvYwJbdg" memberEnd="_osdWIplEEeqHYLLvYwJbdg _osekQJlEEeqHYLLvYwJbdg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_osdWIJlEEeqHYLLvYwJbdg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_osdWIZlEEeqHYLLvYwJbdg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_osekQJlEEeqHYLLvYwJbdg" name="cancion" type="_zZToQJkhEeqHYLLvYwJbdg" association="_oscvEJlEEeqHYLLvYwJbdg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VoNMoJlFEeqHYLLvYwJbdg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_roKSQJlEEeqHYLLvYwJbdg" memberEnd="_roQY4plEEeqHYLLvYwJbdg _roRnAZlEEeqHYLLvYwJbdg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_roQY4JlEEeqHYLLvYwJbdg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_roQY4ZlEEeqHYLLvYwJbdg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_roRnAZlEEeqHYLLvYwJbdg" name="cancion" type="_zZToQJkhEeqHYLLvYwJbdg" association="_roKSQJlEEeqHYLLvYwJbdg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aZyFQJlFEeqHYLLvYwJbdg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_3na5kJlEEeqHYLLvYwJbdg" client="_rgEvQJkuEeqHYLLvYwJbdg" supplier="_7Nw1gJlBEeqHYLLvYwJbdg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_lo2lwJlFEeqHYLLvYwJbdg" client="_rNDFkJkuEeqHYLLvYwJbdg" supplier="_mIip4JkuEeqHYLLvYwJbdg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_7On0UJlFEeqHYLLvYwJbdg" client="_mIip4JkuEeqHYLLvYwJbdg" supplier="_zIiBUJkhEeqHYLLvYwJbdg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_-cZ-8JlFEeqHYLLvYwJbdg" client="_mIip4JkuEeqHYLLvYwJbdg" supplier="_yb_rcJkhEeqHYLLvYwJbdg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_LSs78JlGEeqHYLLvYwJbdg" client="_mIip4JkuEeqHYLLvYwJbdg" supplier="_zZToQJkhEeqHYLLvYwJbdg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_qo6w4JlGEeqHYLLvYwJbdg" memberEnd="_qo7_AJlGEeqHYLLvYwJbdg _qpG-IplGEeqHYLLvYwJbdg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qo7X8JlGEeqHYLLvYwJbdg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qo7X8ZlGEeqHYLLvYwJbdg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qpG-IplGEeqHYLLvYwJbdg" name="formulario" type="_7Nw1gJlBEeqHYLLvYwJbdg" association="_qo6w4JlGEeqHYLLvYwJbdg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2iAewJlGEeqHYLLvYwJbdg" memberEnd="_2iBs4plGEeqHYLLvYwJbdg _2iHMcplGEeqHYLLvYwJbdg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2iBs4JlGEeqHYLLvYwJbdg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2iBs4ZlGEeqHYLLvYwJbdg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2iHMcplGEeqHYLLvYwJbdg" name="formulario" type="_7Nw1gJlBEeqHYLLvYwJbdg" association="_2iAewJlGEeqHYLLvYwJbdg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_6iEa4JlGEeqHYLLvYwJbdg" memberEnd="_6iGQEplGEeqHYLLvYwJbdg _6iG3IplGEeqHYLLvYwJbdg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6iGQEJlGEeqHYLLvYwJbdg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6iGQEZlGEeqHYLLvYwJbdg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_6iG3IplGEeqHYLLvYwJbdg" name="formulario" type="_7Nw1gJlBEeqHYLLvYwJbdg" association="_6iEa4JlGEeqHYLLvYwJbdg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_WXRnMJlHEeqHYLLvYwJbdg" client="_iXYscJkuEeqHYLLvYwJbdg" supplier="_7Nw1gJlBEeqHYLLvYwJbdg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_cgaIoJlHEeqHYLLvYwJbdg" client="_iXYscJkuEeqHYLLvYwJbdg" supplier="_j8fpEJkuEeqHYLLvYwJbdg"/>
 </uml:Model>
