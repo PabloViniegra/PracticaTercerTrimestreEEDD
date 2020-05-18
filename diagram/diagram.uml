@@ -455,9 +455,6 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_3na5kJlEEeqHYLLvYwJbdg" client="_rgEvQJkuEeqHYLLvYwJbdg" supplier="_7Nw1gJlBEeqHYLLvYwJbdg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_lo2lwJlFEeqHYLLvYwJbdg" client="_rNDFkJkuEeqHYLLvYwJbdg" supplier="_mIip4JkuEeqHYLLvYwJbdg"/>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_7On0UJlFEeqHYLLvYwJbdg" client="_mIip4JkuEeqHYLLvYwJbdg" supplier="_zIiBUJkhEeqHYLLvYwJbdg"/>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_-cZ-8JlFEeqHYLLvYwJbdg" client="_mIip4JkuEeqHYLLvYwJbdg" supplier="_yb_rcJkhEeqHYLLvYwJbdg"/>
-  <packagedElement xmi:type="uml:Dependency" xmi:id="_LSs78JlGEeqHYLLvYwJbdg" client="_mIip4JkuEeqHYLLvYwJbdg" supplier="_zZToQJkhEeqHYLLvYwJbdg"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_qo6w4JlGEeqHYLLvYwJbdg" memberEnd="_qo7_AJlGEeqHYLLvYwJbdg _qpG-IplGEeqHYLLvYwJbdg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qo7X8JlGEeqHYLLvYwJbdg" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qo7X8ZlGEeqHYLLvYwJbdg" key="nature" value="UML_Nature"/>
@@ -478,4 +475,5 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_WXRnMJlHEeqHYLLvYwJbdg" client="_iXYscJkuEeqHYLLvYwJbdg" supplier="_7Nw1gJlBEeqHYLLvYwJbdg"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_cgaIoJlHEeqHYLLvYwJbdg" client="_iXYscJkuEeqHYLLvYwJbdg" supplier="_j8fpEJkuEeqHYLLvYwJbdg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_mICGAJlOEeq8KfFOfs8j5w" client="_mIip4JkuEeqHYLLvYwJbdg" supplier="_iXYscJkuEeqHYLLvYwJbdg"/>
 </uml:Model>
