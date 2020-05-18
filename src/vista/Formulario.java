@@ -54,11 +54,11 @@ public class Formulario {
 			switch (aux) {
 			case 1:
 				cancion = form.insertarCancion();
-				migestor.InsertarCancionBBDD(cancion);
+				migestor.insertarCancionBBDD(cancion);
 				break;
 			case 2:
 				artista = form.insertarArtista();
-				migestor.InsertarArtistaBBDD(artista);
+				migestor.insertarArtistaBBDD(artista);
 				break;
 			case 3:
 				disco = form.insertarDiscos();

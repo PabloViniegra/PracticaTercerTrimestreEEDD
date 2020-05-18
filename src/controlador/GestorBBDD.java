@@ -178,7 +178,7 @@ public class GestorBBDD {
 		}
 	}
 
-	public void InsertarCancionBBDD(Cancion c) {
+	public void insertarCancionBBDD(Cancion c) {
 		Connection conn = null;
 		GestorBBDD gestor = new GestorBBDD();
 		try {
@@ -211,7 +211,7 @@ public class GestorBBDD {
 		}
 	}
 
-	public void InsertarArtistaBBDD(Artista a) {
+	public void insertarArtistaBBDD(Artista a) {
 		Connection conn = null;
 		GestorBBDD gestor = new GestorBBDD();
 		try {
