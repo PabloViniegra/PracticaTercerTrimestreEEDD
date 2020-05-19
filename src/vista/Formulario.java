@@ -116,7 +116,7 @@ public class Formulario {
 		Scanner sc = new Scanner(System.in);
 		GestorBBDD gestor = new GestorBBDD();
 		Cancion micancion = new Cancion();
-
+		int aux=-1;
 		System.out.print("Dime el nombre de la canción: ");
 		micancion.setNombreCancion(sc.nextLine());
 		// TODO asegurarse que el usuario meta un número
@@ -128,9 +128,10 @@ public class Formulario {
 		System.out.print(
 				"Selecciona un género? (1.ROCK,2.FOLK,3.POP,4.REGGAETON,5.ELECTRÓNICA,6.JAZZ,7.METAL,8.BLUES,9.FUNK,"
 				+ "10.ALTERNATIVO,11.CLASICA,12.AMBIENTE):");
-		int opcion=sc.nextInt();
+		
 		do {
-			switch(opcion){
+			aux=sc.nextInt();
+			switch(aux){
 			case 1:
 				micancion.setGenero(Genero.ROCK);
 				break;
@@ -171,8 +172,8 @@ public class Formulario {
 				System.out.println("No se ha encontrado el género, por favor elija una opción del menú principal.");
 				break;
 			}			
-		}while (opcion<13 && opcion>0);
-		
+		}while (aux>12);
+		sc.nextLine();
 		//Dejamos esto comentado hasta el testeo con la BBDD
 		/*String respuesta = sc.nextLine();
 		if (respuesta.equalsIgnoreCase(Genero.ROCK.toString())) {
@@ -209,6 +210,7 @@ public class Formulario {
 		System.out.print("Dime el artista: ");
 		String artista = sc.nextLine();
 		micancion.setIdArtista(gestor.conseguirArtista(artista));
+	
 
 		gestor.mostrarDiscos();
 		System.out.print("Dime el disco al que pertenece la canción: ");

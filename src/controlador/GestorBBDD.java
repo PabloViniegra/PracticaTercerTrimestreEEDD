@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Properties;
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 import modelo.Artista;
 import modelo.Cancion;
@@ -64,6 +64,11 @@ public class GestorBBDD {
 				id = resultado.getInt("IdArtista");
 			} else {
 				System.out.println("No se ha encontrado el artista. Revise si lo ha escrito bien.");
+				System.out.println("Pulsa un botón para continuar.");
+				Scanner sc = new Scanner(System.in);
+				sc.nextLine();
+				Formulario f = new Formulario();
+				f.menu();
 			}
 
 		} catch (SQLException e) {
@@ -97,6 +102,11 @@ public class GestorBBDD {
 				id = resultado.getInt("IdDisco");
 			} else {
 				System.out.println("No se ha encontrado el disco. Revise si lo ha escrito bien.");
+				System.out.println("Pulsa un botón para continuar.");
+				Scanner sc = new Scanner(System.in);
+				sc.nextLine();
+				Formulario f = new Formulario();
+				f.menu();
 			}
 
 		} catch (SQLException e) {
@@ -193,6 +203,11 @@ public class GestorBBDD {
 				System.out.println("Cancion insertada con éxito");
 			else
 				System.out.println("No se ha podido insertar");
+			System.out.println("Pulsa un botón para continuar.");
+			Scanner sc = new Scanner(System.in);
+			sc.nextLine();
+			Formulario f = new Formulario();
+			f.menu();
 		} catch (SQLException e) {
 			System.err.print(e.getLocalizedMessage());
 			Formulario f = new Formulario();
@@ -257,6 +272,11 @@ public class GestorBBDD {
 				System.out.println("Disco insertado con éxito");
 			else
 				System.out.println("No se ha podido insertar el disco");
+			System.out.println("Pulsa un botón para continuar.");
+			Scanner sc = new Scanner(System.in);
+			sc.nextLine();
+			Formulario f = new Formulario();
+			f.menu();
 		} catch (SQLException e) {
 			System.err.print(e.getLocalizedMessage());
 			Formulario f = new Formulario();
@@ -288,6 +308,11 @@ public class GestorBBDD {
 				System.out.println("Se ha borrado el registro con éxito");
 			else
 				System.out.println("No se ha podido borrar el registro");
+			System.out.println("Pulsa un botón para continuar.");
+			Scanner sc = new Scanner(System.in);
+			sc.nextLine();
+			Formulario f = new Formulario();
+			f.menu();
 		} catch (SQLException e) {
 			System.err.print(e.getLocalizedMessage());
 			Formulario f = new Formulario();
@@ -355,6 +380,11 @@ public class GestorBBDD {
 				System.out.println("Se ha borrado el artista con éxito");
 			else
 				System.out.println("No se ha podido borrar el registro");
+			System.out.println("Pulsa un botón para continuar.");
+			Scanner sc = new Scanner(System.in);
+			sc.nextLine();
+			Formulario f = new Formulario();
+			f.menu();
 		} catch (SQLException e) {
 			System.err.print(e.getLocalizedMessage());
 			Formulario f = new Formulario();
@@ -386,6 +416,11 @@ public class GestorBBDD {
 				System.out.println("Se ha borrado el disco con éxito");
 			else
 				System.out.println("No se ha podido borrar el registro");
+			System.out.println("Pulsa un botón para continuar.");
+			Scanner sc = new Scanner(System.in);
+			sc.nextLine();
+			Formulario f = new Formulario();
+			f.menu();
 		} catch (SQLException e) {
 			System.err.print(e.getLocalizedMessage());
 			Formulario f = new Formulario();
@@ -419,9 +454,10 @@ public class GestorBBDD {
 				System.out.println("Artista:" + resultado.getObject("artistas.NombreArt") + "|Año Creación:"
 						+ resultado.getObject("artistas.AñoCreacion") + "|Integrantes:"
 						+ resultado.getObject("artistas.NumIntegrantes") + "|Nombre del Disco:"
-						+ resultado.getObject("discos.NombreDisco") + "|Precio:" + resultado.getObject("discos.Precio") + "€|Img:"
-						+ resultado.getObject("discos.ImgPortada") + "|Nombre de la Canción:" + resultado.getObject("canciones.NombreCan")
-						+ "|Duración:" + resultado.getObject("canciones.Duracion") + " minutos|"
+						+ resultado.getObject("discos.NombreDisco") + "|Precio:" + resultado.getObject("discos.Precio")
+						+ "€|Img:" + resultado.getObject("discos.ImgPortada") + "|Nombre de la Canción:"
+						+ resultado.getObject("canciones.NombreCan") + "|Duración:"
+						+ resultado.getObject("canciones.Duracion") + " minutos|"
 						+ resultado.getObject("canciones.Genero"));
 				System.out.println(
 						"_______________________________________________________________________________________________________________________________");
@@ -499,13 +535,13 @@ public class GestorBBDD {
 		try {
 			conn = gestor.accesoBBDD();
 			Statement consulta = conn.createStatement();
-			String query = "update artistas set NombreArt='" + a.getNombreArtista() +
-					"',AñoCreacion=" + a.getAnioCreacion() + ",NumIntegrantes=" +
-					a.getNumIntegrantes() + " where NombreArt='" + aux + "'";
-			
+			String query = "update artistas set NombreArt='" + a.getNombreArtista() + "',AñoCreacion="
+					+ a.getAnioCreacion() + ",NumIntegrantes=" + a.getNumIntegrantes() + " where NombreArt='" + aux
+					+ "'";
+
 			int valor = consulta.executeUpdate(query);
-			
-			if (valor==1)
+
+			if (valor == 1)
 				System.out.println("Se ha modificado el artista correctamente");
 			else
 				System.out.println("No se ha podido modificar el registro");
@@ -527,18 +563,17 @@ public class GestorBBDD {
 
 		}
 	}
-	
-	public void modificarDisco (String aux, Disco d) {
+
+	public void modificarDisco(String aux, Disco d) {
 		Connection conn = null;
 		GestorBBDD gestor = new GestorBBDD();
 		try {
 			conn = gestor.accesoBBDD();
 			Statement consulta = conn.createStatement();
-			String query = "update discos set ImgPortada='" + d.getImgPortada() +
-					"',NombreDisco='" + d.getNombreDisco() + "',Precio=" +
-					d.getPrecio() + "where NombreDisco='" + aux + "'";
+			String query = "update discos set ImgPortada='" + d.getImgPortada() + "',NombreDisco='" + d.getNombreDisco()
+					+ "',Precio=" + d.getPrecio() + "where NombreDisco='" + aux + "'";
 			int valor = consulta.executeUpdate(query);
-			
+
 			if (valor == 1)
 				System.out.println("Se ha modificado el disco correctamente");
 			else
