@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_SPQiIJm5EeqCa6A6YzUIsg" name="useCase">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_SgKE4Jm5EeqCa6A6YzUIsg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_cTwF4Jm5EeqCa6A6YzUIsg" name="Usuario"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_eSEMsJm5EeqCa6A6YzUIsg" name="Insertar">
+    <include xmi:type="uml:Include" xmi:id="_0sFGMJm6EeqCa6A6YzUIsg" addition="_Tt_7kJm6EeqCa6A6YzUIsg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_equkUJm5EeqCa6A6YzUIsg" name="Modificar">
+    <include xmi:type="uml:Include" xmi:id="_1h1CcJm6EeqCa6A6YzUIsg" addition="_Tt_7kJm6EeqCa6A6YzUIsg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_gF3FkJm5EeqCa6A6YzUIsg" name="Borrar">
+    <include xmi:type="uml:Include" xmi:id="_2PFxEJm6EeqCa6A6YzUIsg" addition="_Tt_7kJm6EeqCa6A6YzUIsg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_hFRUIJm5EeqCa6A6YzUIsg" name="Visualizar">
+    <include xmi:type="uml:Include" xmi:id="_3BYwsJm6EeqCa6A6YzUIsg" addition="_Tt_7kJm6EeqCa6A6YzUIsg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_xzPtUJm5EeqCa6A6YzUIsg" name="Salir">
+    <include xmi:type="uml:Include" xmi:id="_32CgwJm6EeqCa6A6YzUIsg" addition="_Tt_7kJm6EeqCa6A6YzUIsg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_Tt_7kJm6EeqCa6A6YzUIsg" name="Llenar los campos"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_YFI68Jm6EeqCa6A6YzUIsg" name="Menu">
+    <include xmi:type="uml:Include" xmi:id="_qL99cJm6EeqCa6A6YzUIsg" addition="_eSEMsJm5EeqCa6A6YzUIsg"/>
+    <include xmi:type="uml:Include" xmi:id="_t0390Jm6EeqCa6A6YzUIsg" addition="_xzPtUJm5EeqCa6A6YzUIsg"/>
+    <include xmi:type="uml:Include" xmi:id="_winWcJm6EeqCa6A6YzUIsg" addition="_gF3FkJm5EeqCa6A6YzUIsg"/>
+    <include xmi:type="uml:Include" xmi:id="_yN0UAJm6EeqCa6A6YzUIsg" addition="_equkUJm5EeqCa6A6YzUIsg"/>
+    <include xmi:type="uml:Include" xmi:id="_zLAVAJm6EeqCa6A6YzUIsg" addition="_hFRUIJm5EeqCa6A6YzUIsg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_b7I8IJm6EeqCa6A6YzUIsg" memberEnd="_b7ao8Jm6EeqCa6A6YzUIsg _b7ao8Zm6EeqCa6A6YzUIsg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b7YzwJm6EeqCa6A6YzUIsg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_b7Za0Jm6EeqCa6A6YzUIsg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_b7ao8Jm6EeqCa6A6YzUIsg" name="menu" type="_YFI68Jm6EeqCa6A6YzUIsg" association="_b7I8IJm6EeqCa6A6YzUIsg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_b7ao8Zm6EeqCa6A6YzUIsg" name="usuario" type="_cTwF4Jm5EeqCa6A6YzUIsg" association="_b7I8IJm6EeqCa6A6YzUIsg"/>
+  </packagedElement>
+</uml:Model>
