@@ -3,19 +3,20 @@ package vista;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 import controlador.GestorBBDD;
 import controlador.GestorFicheros;
 import modelo.Artista;
 import modelo.Cancion;
+import modelo.Cancion.Genero;
 import modelo.Disco;
 import modelo.Interaccion;
-import modelo.Cancion.Genero;
 
 public class Formulario {
 
 	public void menu() {
 		Scanner sc = new Scanner(System.in);
-		int aux = 0;
+		int aux = -1;
 		ArrayList<Interaccion> miArray = new ArrayList<Interaccion>();
 		GestorBBDD migestor = new GestorBBDD();
 		GestorFicheros fich = new GestorFicheros();
@@ -38,18 +39,7 @@ public class Formulario {
 			System.out.println("11. Salir");
 			System.out.println("_____________");
 			System.out.print("Introduce una opcion: ");
-			boolean check = false;
-			while (!check) {
-				try {
-					aux = sc.nextInt();
-					check = true;
-				} catch (InputMismatchException e) {
-					System.out.println("Introduce un número por favor.");
-					aux = sc.nextInt();
-				} finally {
-					sc.nextLine();
-				}
-			}
+			aux = sc.nextInt();
 
 			switch (aux) {
 			case 1:
@@ -68,7 +58,7 @@ public class Formulario {
 				migestor.mostrarCanciones();
 				System.out.print("Inserte el nombre de la canción a modificar: ");
 				String modificarCancion = sc.nextLine();
-				cancion=form.modificarCancion(cancion);
+				cancion = form.modificarCancion(cancion);
 				migestor.modificarCancionBBDD(modificarCancion, cancion);
 				break;
 			case 5:
@@ -82,7 +72,7 @@ public class Formulario {
 				migestor.mostrarDiscos();
 				System.out.print("Inserte el nombre del disco a modificar: ");
 				String modificarDisco = sc.nextLine();
-				disco=form.modificarDisco(disco);
+				disco = form.modificarDisco(disco);
 				migestor.modificarDisco(modificarDisco, disco);
 				break;
 			case 7:
@@ -104,13 +94,18 @@ public class Formulario {
 				migestor.borrarDiscoBBDD(nombreDisco);
 				break;
 			case 10:
-				miArray=migestor.mostrarTodo();
+				miArray = migestor.mostrarTodo();
 				fich.escribirHTML(miArray);
 				break;
 			case 11:
 				System.out.println("¡Hasta pronto!");
 			default:
-				System.out.println("Opción incorrecta");
+				System.out.println("Opción incorrecta!, pulse una tecla para continuar");
+
+				// Como introducimos un integer, salta el primer nextLine para obligar al
+				// usuario a leer el mensaje de error y pulsar una tecla
+				sc.nextLine();
+				sc.nextLine();
 				break;
 			}
 
@@ -124,14 +119,62 @@ public class Formulario {
 
 		System.out.print("Dime el nombre de la canción: ");
 		micancion.setNombreCancion(sc.nextLine());
-		//TODO asegurarse que el usuario meta un número
+		// TODO asegurarse que el usuario meta un número
 		System.out.print("¿Cuánto dura? en segundos");
 		micancion.setDuracion(sc.nextInt());
-		sc.nextLine();
-		//TODO: Convertir en un Switch, si el usuario no ha elegido bien el género que lo vuelva a pedir.
+		//sc.nextLine();
+		// TODO: Convertir en un Switch, si el usuario no ha elegido bien el género que
+		// lo vuelva a pedir.
 		System.out.print(
-				"Cuál es su género? (ROCK,FOLK,POP,REGGAETON,ELECTRÓNICA,JAZZ,METAL,BLUES,FUNK,ALTERNATIVO,CLASICA,AMBIENTE):");
-		String respuesta = sc.nextLine();
+				"Selecciona un género? (1.ROCK,2.FOLK,3.POP,4.REGGAETON,5.ELECTRÓNICA,6.JAZZ,7.METAL,8.BLUES,9.FUNK,"
+				+ "10.ALTERNATIVO,11.CLASICA,12.AMBIENTE):");
+		int opcion=sc.nextInt();
+		do {
+			switch(opcion){
+			case 1:
+				micancion.setGenero(Genero.ROCK);
+				break;
+			case 2:
+				micancion.setGenero(Genero.FOLK);
+				break;
+			case 3:
+				micancion.setGenero(Genero.POP);
+				break;
+			case 4:
+				micancion.setGenero(Genero.REGGAETON);
+				break;
+			case 5:
+				micancion.setGenero(Genero.ELECTRÓNICA);
+				break;
+			case 6:
+				micancion.setGenero(Genero.JAZZ);
+				break;
+			case 7:
+				micancion.setGenero(Genero.METAL);
+				break;
+			case 8:
+				micancion.setGenero(Genero.BLUES);
+				break;
+			case 9:
+				micancion.setGenero(Genero.FUNK);
+				break;
+			case 10:
+				micancion.setGenero(Genero.ALTERNATIVO);
+				break;
+			case 11:
+				micancion.setGenero(Genero.CLASICA);
+				break;
+			case 12:	
+				micancion.setGenero(Genero.AMBIENTE);
+				break;
+			default:
+				System.out.println("No se ha encontrado el género, por favor elija una opción del menú principal.");
+				break;
+			}			
+		}while (opcion<13 && opcion>0);
+		
+		//Dejamos esto comentado hasta el testeo con la BBDD
+		/*String respuesta = sc.nextLine();
 		if (respuesta.equalsIgnoreCase(Genero.ROCK.toString())) {
 			micancion.setGenero(Genero.ROCK);
 		} else if (respuesta.equalsIgnoreCase(Genero.FOLK.toString())) {
@@ -160,7 +203,7 @@ public class Formulario {
 			micancion.setGenero(Genero.AMBIENTE);
 		} else {
 			System.out.println("No se ha encontrado el género, por favor revise los géneros que se pueden introducir.");
-		}
+		}*/
 
 		gestor.mostrarArtistas();
 		System.out.print("Dime el artista: ");
@@ -181,11 +224,10 @@ public class Formulario {
 
 		System.out.print("Dime el nombre del artista: ");
 		miartista.setNombreArtista(sc.nextLine());
-		
+
 		System.out.print("Año en el que empezó/empezaron: ");
 		miartista.setAnioCreacion(sc.nextInt());
-		
-		
+
 		System.out.print("Número de integrantes: ");
 		miartista.setNumIntegrantes(sc.nextByte());
 
@@ -216,19 +258,20 @@ public class Formulario {
 		}
 		return midisco;
 	}
-	
-	public Cancion modificarCancion (Cancion c) {
-		Scanner sc = new Scanner (System.in);
+
+	public Cancion modificarCancion(Cancion c) {
+		Scanner sc = new Scanner(System.in);
 		GestorBBDD gestor = new GestorBBDD();
-		
+
 		System.out.print("Nuevo nombre de la canción: ");
 		c.setNombreCancion(sc.nextLine());
-		
+
 		System.out.print("Nueva duración: ");
 		c.setDuracion(sc.nextInt());
 		sc.nextLine();
-		
-		System.out.print("¿Cuál es su nuevo género? (ROCK,FOLK,POP,REGGAETON,ELECTRÓNICA,JAZZ,METAL,BLUES,FUNK,ALTERNATIVO,CLASICA,AMBIENTE):");
+
+		System.out.print(
+				"¿Cuál es su nuevo género? (ROCK,FOLK,POP,REGGAETON,ELECTRÓNICA,JAZZ,METAL,BLUES,FUNK,ALTERNATIVO,CLASICA,AMBIENTE):");
 		String respuesta = sc.nextLine();
 		if (respuesta.equalsIgnoreCase(Genero.ROCK.toString())) {
 			c.setGenero(Genero.ROCK);
@@ -259,48 +302,48 @@ public class Formulario {
 		} else {
 			System.out.println("No se ha encontrado el género, por favor revise los géneros que se pueden introducir.");
 		}
-		
+
 		gestor.mostrarArtistas();
 		System.out.print("Nuevo artista: ");
 		String artista = sc.nextLine();
 		c.setIdArtista(gestor.conseguirArtista(artista));
-		
+
 		gestor.mostrarDiscos();
 		System.out.print("Nuevo disco: ");
 		String disco = sc.nextLine();
 		c.setIdDisco(gestor.conseguirDisco(disco));
-		
+
 		return c;
 	}
-	
-	public Artista modificarArtista (Artista a) {
-		Scanner sc = new Scanner (System.in);
+
+	public Artista modificarArtista(Artista a) {
+		Scanner sc = new Scanner(System.in);
 		GestorBBDD gestor = new GestorBBDD();
 		sc.nextLine();
-		
+
 		System.out.print("Nuevo nombre del Artista: ");
 		a.setNombreArtista(sc.nextLine());
-		//sc.nextLine();
-		
+		// sc.nextLine();
+
 		System.out.print("Nuevo año en el que empezaron: ");
 		a.setAnioCreacion(sc.nextInt());
-		
+
 		System.out.print("Número de integrantes: ");
 		a.setNumIntegrantes(sc.nextByte());
-		
+
 		return a;
 	}
-	
-	public Disco modificarDisco (Disco d) {
-		Scanner sc = new Scanner (System.in);
+
+	public Disco modificarDisco(Disco d) {
+		Scanner sc = new Scanner(System.in);
 		GestorBBDD gestor = new GestorBBDD();
-		
+
 		System.out.print("Nuevo nombre del disco: ");
 		d.setNombreDisco(sc.nextLine());
-		
+
 		System.out.println("Nueva imagen de portada: ");
 		d.setImgPortada(sc.nextLine());
-		
+
 		System.out.print("Introduce su nuevo precio: ");
 		boolean check = false;
 		while (!check) {
