@@ -8,9 +8,16 @@ import java.util.UUID;
 
 import modelo.Interaccion;
 import vista.Formulario;
-
+/**
+ * Permite la interacción de la Aplicación con los ficheros.
+ * @author Pablo, Jonatan y Clara
+ *
+ */
 public class GestorFicheros {
-	
+	/**
+	 * Recibe toda la información de la Base de datos en un ArrayList y lo escribe en un fichero HTML.
+	 * @param miArray el ArrayList con la información
+	 */
 	public void escribirHTML (ArrayList <Interaccion> miArray) {
 		String uniqueID = UUID.randomUUID().toString();
 		File archivo = null;

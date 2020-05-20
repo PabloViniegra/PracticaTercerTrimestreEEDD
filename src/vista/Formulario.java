@@ -11,9 +11,15 @@ import modelo.Cancion;
 import modelo.Cancion.Genero;
 import modelo.Disco;
 import modelo.Interaccion;
-
+/**
+ * Gestiona todas las vistas que va a ver el propio usuario.
+ * @author Pablo, Jonatan y Clara
+ *
+ */
 public class Formulario {
-
+	/**
+	 * Muestra por pantalla el menú de la Aplicación.
+	 */
 	public void menu() {
 		Scanner sc = new Scanner(System.in);
 		int aux = -1;
@@ -111,7 +117,10 @@ public class Formulario {
 
 		} while (aux != 11);
 	}
-
+	/**
+	 * Rellena de información un objeto Canción y lo devuelve construido.
+	 * @return el objeto Cancion
+	 */
 	public Cancion insertarCancion() {
 		Scanner sc = new Scanner(System.in);
 		GestorBBDD gestor = new GestorBBDD();
@@ -219,7 +228,10 @@ public class Formulario {
 
 		return micancion;
 	}
-
+	/**
+	 * Rellena de información un objeto Artista y lo devuelve construido.
+	 * @return el objeto Artista
+	 */
 	public Artista insertarArtista() {
 		Scanner sc = new Scanner(System.in);
 		Artista miartista = new Artista();
@@ -235,7 +247,10 @@ public class Formulario {
 
 		return miartista;
 	}
-
+	/**
+	 * Rellena de información un objeto Disco y lo devuelve construido.
+	 * @return el objeto Disco
+	 */
 	public Disco insertarDiscos() {
 		Scanner sc = new Scanner(System.in);
 		Disco midisco = new Disco();
@@ -260,7 +275,11 @@ public class Formulario {
 		}
 		return midisco;
 	}
-
+	/**
+	 * Modifica un objeto Cancion anteriormente construido con nueva información que introduzca el usuario.
+	 * @param c el objeto Cancion a modificar
+	 * @return el objeto Cancion modificado
+	 */
 	public Cancion modificarCancion(Cancion c) {
 		Scanner sc = new Scanner(System.in);
 		GestorBBDD gestor = new GestorBBDD();
@@ -317,7 +336,11 @@ public class Formulario {
 
 		return c;
 	}
-
+	/**
+	 * Modifica un objeto Artista anteriormente construido con nueva información que introduzca el usuario.
+	 * @param a el objeto Artista a modificar
+	 * @return el objeto Artista modificado
+	 */
 	public Artista modificarArtista(Artista a) {
 		Scanner sc = new Scanner(System.in);
 		GestorBBDD gestor = new GestorBBDD();
@@ -335,7 +358,11 @@ public class Formulario {
 
 		return a;
 	}
-
+	/**
+	 * Modifica un objeto Disco anteriormente construido con nueva información que introduzca el usuario.
+	 * @param d el objeto Disco a modificar
+	 * @return el objeto Disco modificado
+	 */
 	public Disco modificarDisco(Disco d) {
 		Scanner sc = new Scanner(System.in);
 		GestorBBDD gestor = new GestorBBDD();
