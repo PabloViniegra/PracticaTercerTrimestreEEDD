@@ -191,7 +191,7 @@ public class Formulario {
 				System.out.println("No se ha encontrado el género, por favor elija una opción del menú principal.");
 				break;
 			}			
-		}while (aux>12);
+		}while (aux>12 || aux <0);
 		sc.nextLine();
 		//Dejamos esto comentado hasta el testeo con la BBDD
 		/*String respuesta = sc.nextLine();
