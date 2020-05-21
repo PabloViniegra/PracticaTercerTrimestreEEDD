@@ -1,0 +1,28 @@
+PASOS PREVIOS
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+La Base de Datos es mysql y se ha trabajado
+con ella a través de phpmyadmin en el Framewrok
+XAMPP. Para acceder simplemente importe el archivo
+que hay en el directorio raiz denominado 'proyectoeedd3_t.sql'.
+También necesitará un usuario específico con todos los
+privilegios para el correcto funcionamiento de la 
+aplicación, este usuario es Nombre de usuario: admin
+y contraseña: admin. Para más dudas consulte el archivo
+BBDD.properties ubicado también en la raíz del proyecto.
+También puede modificar este fichero properties para
+crearse un usuario y contraseña a su gusto, la aplicación
+implementará los cambios automáticamente.
+
+
+INFORMACIÓN SOBRE LAS IMÁGENES
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Para ver las imagenes en el .html tienes que
+agregar en esta carpeta 'img' las portadas
+de los discos con el nombre que has especificado
+en la propia aplicación. Por ejemplo, si he agregado
+el disco "Justice for All" de "Metallica" y le puse
+en la imagen de la portada 'justice.jpg' deberé buscar
+la imagen de la portada y guardar la imagen en esta carpeta
+como 'justice.jpg'. Así se verán las imagenes correspondientes
+en la tabla del html.
