@@ -74,7 +74,7 @@ public class Formulario {
 			case 5:
 				sc.nextLine();
 				migestor.mostrarArtistas();
-				System.out.println("Inserte el nombre del artista a modificar:");
+				System.out.println("Inserte el nombre del artista a modificar: ");
 				String modificarArtista = sc.nextLine();
 				artista = form.modificarArtista(artista);
 				migestor.modificarArtista(modificarArtista, artista);
@@ -139,7 +139,7 @@ public class Formulario {
 		System.out.print("Dime el nombre de la canción: ");
 		micancion.setNombreCancion(sc.nextLine());
 		// TODO asegurarse que el usuario meta un número
-		System.out.print("¿Cuánto dura? en segundos");
+		System.out.print("¿Cuánto dura? en segundos: ");
 		micancion.setDuracion(sc.nextInt());
 		//sc.nextLine();
 		// TODO: Convertir en un Switch, si el usuario no ha elegido bien el género que
@@ -188,43 +188,12 @@ public class Formulario {
 				micancion.setGenero(Genero.AMBIENTE);
 				break;
 			default:
-				System.out.println("No se ha encontrado el género, por favor elija una opción del menú principal.");
+				System.out.println("No se ha encontrado el género, por favor elija una opción del menú principal");
 				break;
 			}			
 		}while (aux>12 || aux <0);
 		sc.nextLine();
-		//Dejamos esto comentado hasta el testeo con la BBDD
-		/*String respuesta = sc.nextLine();
-		if (respuesta.equalsIgnoreCase(Genero.ROCK.toString())) {
-			micancion.setGenero(Genero.ROCK);
-		} else if (respuesta.equalsIgnoreCase(Genero.FOLK.toString())) {
-			micancion.setGenero(Genero.FOLK);
-		} else if (respuesta.equalsIgnoreCase(Genero.POP.toString())) {
-			micancion.setGenero(Genero.POP);
-		} else if (respuesta.equalsIgnoreCase(Genero.REGGAETON.toString())) {
-			micancion.setGenero(Genero.REGGAETON);
-		} else if (respuesta.equalsIgnoreCase(Genero.ELECTRÓNICA.toString())) {
-			micancion.setGenero(Genero.ELECTRÓNICA);
-		} else if (respuesta.equalsIgnoreCase(Genero.JAZZ.toString())) {
-			micancion.setGenero(Genero.JAZZ);
-		} else if (respuesta.equalsIgnoreCase(Genero.METAL.toString())) {
-			micancion.setGenero(Genero.METAL);
-		} else if (respuesta.equalsIgnoreCase(Genero.FOLK.toString())) {
-			micancion.setGenero(Genero.FOLK);
-		} else if (respuesta.equalsIgnoreCase(Genero.BLUES.toString())) {
-			micancion.setGenero(Genero.BLUES);
-		} else if (respuesta.equalsIgnoreCase(Genero.FUNK.toString())) {
-			micancion.setGenero(Genero.FUNK);
-		} else if (respuesta.equalsIgnoreCase(Genero.ALTERNATIVO.toString())) {
-			micancion.setGenero(Genero.ALTERNATIVO);
-		} else if (respuesta.equalsIgnoreCase(Genero.CLASICA.toString())) {
-			micancion.setGenero(Genero.CLASICA);
-		} else if (respuesta.equalsIgnoreCase(Genero.AMBIENTE.toString())) {
-			micancion.setGenero(Genero.AMBIENTE);
-		} else {
-			System.out.println("No se ha encontrado el género, por favor revise los géneros que se pueden introducir.");
-		}*/
-
+	
 		gestor.mostrarArtistas();
 		System.out.print("Dime el artista: ");
 		String artista = sc.nextLine();
@@ -268,7 +237,7 @@ public class Formulario {
 		System.out.print("Dime el nombre del disco: ");
 		midisco.setNombreDisco(sc.nextLine());
 
-		System.out.print("Imagen portada del disco (pon nombre ej: JusticeForAll.jpg):");
+		System.out.print("Imagen portada del disco (pon nombre ej: JusticeForAll.jpg): ");
 		midisco.setImgPortada(sc.nextLine());
 
 		System.out.print("Introduce su precio: ");
@@ -311,7 +280,6 @@ public class Formulario {
 
 		System.out.print(
 				"¿Cuál es su nuevo género? (ROCK,FOLK,POP,REGGAETON,ELECTRÓNICA,JAZZ,METAL,BLUES,FUNK,ALTERNATIVO,CLASICA,AMBIENTE):");
-		
 		
 		do {
 			respuesta=sc.nextInt();
@@ -358,35 +326,6 @@ public class Formulario {
 			}			
 		}while (respuesta>12 || respuesta <0);
 		sc.nextLine();
-		/*if (respuesta.equalsIgnoreCase(Genero.ROCK.toString())) {
-			c.setGenero(Genero.ROCK);
-		} else if (respuesta.equalsIgnoreCase(Genero.FOLK.toString())) {
-			c.setGenero(Genero.FOLK);
-		} else if (respuesta.equalsIgnoreCase(Genero.POP.toString())) {
-			c.setGenero(Genero.POP);
-		} else if (respuesta.equalsIgnoreCase(Genero.REGGAETON.toString())) {
-			c.setGenero(Genero.REGGAETON);
-		} else if (respuesta.equalsIgnoreCase(Genero.ELECTRÓNICA.toString())) {
-			c.setGenero(Genero.ELECTRÓNICA);
-		} else if (respuesta.equalsIgnoreCase(Genero.JAZZ.toString())) {
-			c.setGenero(Genero.JAZZ);
-		} else if (respuesta.equalsIgnoreCase(Genero.METAL.toString())) {
-			c.setGenero(Genero.METAL);
-		} else if (respuesta.equalsIgnoreCase(Genero.FOLK.toString())) {
-			c.setGenero(Genero.FOLK);
-		} else if (respuesta.equalsIgnoreCase(Genero.BLUES.toString())) {
-			c.setGenero(Genero.BLUES);
-		} else if (respuesta.equalsIgnoreCase(Genero.FUNK.toString())) {
-			c.setGenero(Genero.FUNK);
-		} else if (respuesta.equalsIgnoreCase(Genero.ALTERNATIVO.toString())) {
-			c.setGenero(Genero.ALTERNATIVO);
-		} else if (respuesta.equalsIgnoreCase(Genero.CLASICA.toString())) {
-			c.setGenero(Genero.CLASICA);
-		} else if (respuesta.equalsIgnoreCase(Genero.AMBIENTE.toString())) {
-			c.setGenero(Genero.AMBIENTE);
-		} else {
-			System.out.println("No se ha encontrado el género, por favor revise los géneros que se pueden introducir.");
-		}*/
 
 		gestor.mostrarArtistas();
 		System.out.print("Nuevo artista: ");
