@@ -49,18 +49,22 @@ public class Formulario {
 
 			switch (aux) {
 			case 1:
+				sc.nextLine();
 				cancion = form.insertarCancion();
 				migestor.insertarCancionBBDD(cancion);
 				break;
 			case 2:
+				sc.nextLine();
 				artista = form.insertarArtista();
 				migestor.insertarArtistaBBDD(artista);
 				break;
 			case 3:
+				sc.nextLine();
 				disco = form.insertarDiscos();
 				migestor.insertarDiscoBBDD(disco);
 				break;
 			case 4:
+				sc.nextLine();
 				migestor.mostrarCanciones();
 				System.out.print("Inserte el nombre de la canción a modificar: ");
 				String modificarCancion = sc.nextLine();
@@ -68,6 +72,7 @@ public class Formulario {
 				migestor.modificarCancionBBDD(modificarCancion, cancion);
 				break;
 			case 5:
+				sc.nextLine();
 				migestor.mostrarArtistas();
 				System.out.println("Inserte el nombre del artista a modificar:");
 				String modificarArtista = sc.nextLine();
@@ -75,6 +80,7 @@ public class Formulario {
 				migestor.modificarArtista(modificarArtista, artista);
 				break;
 			case 6:
+				sc.nextLine();
 				migestor.mostrarDiscos();
 				System.out.print("Inserte el nombre del disco a modificar: ");
 				String modificarDisco = sc.nextLine();
@@ -82,24 +88,28 @@ public class Formulario {
 				migestor.modificarDisco(modificarDisco, disco);
 				break;
 			case 7:
+				sc.nextLine();
 				migestor.mostrarCanciones();
 				System.out.print("Introduzca el nombre de la cancion que quiere borrar: ");
 				String nombreCancion = sc.nextLine();
 				migestor.borrarCancionBBDD(nombreCancion);
 				break;
 			case 8:
+				sc.nextLine();
 				migestor.mostrarArtistas();
 				System.out.print("Introduzca el nombre del artista que quiere borrar: ");
 				String nombreArtista = sc.nextLine();
 				migestor.borrarArtistaBBDD(nombreArtista);
 				break;
 			case 9:
+				sc.nextLine();
 				migestor.mostrarDiscos();
 				System.out.print("Introduzca el nombre del disco que quiera borrar: ");
 				String nombreDisco = sc.nextLine();
 				migestor.borrarDiscoBBDD(nombreDisco);
 				break;
 			case 10:
+				sc.nextLine();
 				miArray = migestor.mostrarTodo();
 				fich.escribirHTML(miArray);
 				break;
@@ -269,8 +279,15 @@ public class Formulario {
 				check = true;
 			} catch (InputMismatchException e) {
 				System.out.println("Por favor introduce un dato numérico");
+				System.out.println("Pulsa un botón para continuar...");
+				sc.nextLine();
+				sc.nextLine();
+				menu();
 			} catch (NumberFormatException e) {
 				System.out.println("Parece que el sistema no ha aceptado tu símbolo de decimales");
+				System.out.println("Pulsa un botón para continuar...");
+				sc.nextLine();
+				menu();
 			}
 		}
 		return midisco;
