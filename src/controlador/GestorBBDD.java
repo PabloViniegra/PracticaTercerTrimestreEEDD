@@ -17,14 +17,17 @@ import modelo.Cancion;
 import modelo.Disco;
 import modelo.Interaccion;
 import vista.Formulario;
+
 /**
  * Gestiona la interacción de la Aplicación con la Base de Datos.
+ * 
  * @author Pablo, Jonatan y Clara
  *
  */
 public class GestorBBDD {
 	/**
 	 * Lee el fichero de propiedades y construye la conexión de la Base de Datos.
+	 * 
 	 * @return la conexión a la Base de Datos
 	 */
 	public Connection accesoBBDD() {
@@ -57,8 +60,11 @@ public class GestorBBDD {
 		// Devolvemos el objeto
 		return conn;
 	}
+
 	/**
-	 * Extrae el identificador a partir del nombre del Artista que haya recibido como parámetro.
+	 * Extrae el identificador a partir del nombre del Artista que haya recibido
+	 * como parámetro.
+	 * 
 	 * @param a la cadena con el nombre del Artista
 	 * @return el identificador del Artista
 	 */
@@ -99,8 +105,11 @@ public class GestorBBDD {
 		}
 		return id;
 	}
+
 	/**
-	 * Extrae el identificador a partir del nombre del Artista que haya recibido como parámetro.
+	 * Extrae el identificador a partir del nombre del Artista que haya recibido
+	 * como parámetro.
+	 * 
 	 * @param d la cadena con el nombre del Disco
 	 * @return el identificador del Disco
 	 */
@@ -141,8 +150,10 @@ public class GestorBBDD {
 			return id;
 		}
 	}
+
 	/**
-	 * Muestra en pantalla todos los Artistas listados en la Base de Datos por su nombre.
+	 * Muestra en pantalla todos los Artistas listados en la Base de Datos por su
+	 * nombre.
 	 */
 	public void mostrarArtistas() {
 		Connection conn = null;
@@ -173,8 +184,10 @@ public class GestorBBDD {
 
 		}
 	}
+
 	/**
-	 * Muestra en pantalla todos los Discos listados en la Base de Datos por su nombre.
+	 * Muestra en pantalla todos los Discos listados en la Base de Datos por su
+	 * nombre.
 	 */
 	public void mostrarDiscos() {
 		Connection conn = null;
@@ -206,8 +219,10 @@ public class GestorBBDD {
 
 		}
 	}
+
 	/**
 	 * Recibe un objeto Cancion construido y lo inserta en la Base de Datos.
+	 * 
 	 * @param c el objeto Cancion
 	 */
 	public void insertarCancionBBDD(Cancion c) {
@@ -247,8 +262,10 @@ public class GestorBBDD {
 
 		}
 	}
+
 	/**
 	 * Recibe un objeto Artista construido y lo inserta en la Base de Datos.
+	 * 
 	 * @param a el objeto Artista
 	 */
 	public void insertarArtistaBBDD(Artista a) {
@@ -282,8 +299,10 @@ public class GestorBBDD {
 
 		}
 	}
+
 	/**
 	 * Recibe un objeto Disco construido y lo inserta en la Base de Datos.
+	 * 
 	 * @param d el objeto Disco
 	 */
 	public void insertarDiscoBBDD(Disco d) {
@@ -322,8 +341,11 @@ public class GestorBBDD {
 
 		}
 	}
+
 	/**
-	 * Borra del registro de la Base de Datos la Cancion cuyo nombre reciba como parámetro.
+	 * Borra del registro de la Base de Datos la Cancion cuyo nombre reciba como
+	 * parámetro.
+	 * 
 	 * @param aux el nombre de la Cancion a borrar
 	 */
 	public void borrarCancionBBDD(String aux) {
@@ -361,8 +383,10 @@ public class GestorBBDD {
 
 		}
 	}
+
 	/**
-	 * Muestra por pantalla todas las Canciones que se encuentran listadas en la Base de Datos con sus respectivos datos asociados.
+	 * Muestra por pantalla todas las Canciones que se encuentran listadas en la
+	 * Base de Datos con sus respectivos datos asociados.
 	 */
 	public void mostrarCanciones() {
 		Connection conn = null;
@@ -399,8 +423,11 @@ public class GestorBBDD {
 
 		}
 	}
+
 	/**
-	 * Borra del registro de la Base de Datos el Artista cuyo nombre reciba como parámetro.
+	 * Borra del registro de la Base de Datos el Artista cuyo nombre reciba como
+	 * parámetro.
+	 * 
 	 * @param aux el nombre del Artista
 	 */
 	public void borrarArtistaBBDD(String aux) {
@@ -438,8 +465,11 @@ public class GestorBBDD {
 
 		}
 	}
+
 	/**
-	 * Borra del registro de la Base de Datos el Disco cuyo nombre reciba como parámetro.
+	 * Borra del registro de la Base de Datos el Disco cuyo nombre reciba como
+	 * parámetro.
+	 * 
 	 * @param d el nombre del Disco
 	 */
 	public void borrarDiscoBBDD(String d) {
@@ -477,9 +507,12 @@ public class GestorBBDD {
 
 		}
 	}
+
 	/**
-	 * Muestra por pantalla todos los datos de  todas las tablas que se encuentran el
-	 *  la Base de Datos recibiendo dichos datos en un ArrayList que pasa como parámetro.
+	 * Muestra por pantalla todos los datos de todas las tablas que se encuentran el
+	 * la Base de Datos recibiendo dichos datos en un ArrayList que pasa como
+	 * parámetro.
+	 * 
 	 * @return el ArrayList con la información
 	 */
 	public ArrayList mostrarTodo() {
@@ -537,10 +570,13 @@ public class GestorBBDD {
 		return miArray;
 
 	}
+
 	/**
-	 * Modifica la información de un objeto Cancion ya construido y actualiza la Base de Datos.
+	 * Modifica la información de un objeto Cancion ya construido y actualiza la
+	 * Base de Datos.
+	 * 
 	 * @param aux el nombre de la Cancion a modificar
-	 * @param c el objeto Cancion que va a ser modificado
+	 * @param c   el objeto Cancion que va a ser modificado
 	 */
 	public void modificarCancionBBDD(String aux, Cancion c) {
 		Connection conn = null;
@@ -575,8 +611,11 @@ public class GestorBBDD {
 
 		}
 	}
+
 	/**
-	 * Modifica la información de un objeto Artista ya construido y actualiza la Base de Datos.
+	 * Modifica la información de un objeto Artista ya construido y actualiza la
+	 * Base de Datos.
+	 * 
 	 * @param aux el nombre de la Artista a modificar
 	 */
 	public void modificarArtista(String aux, Artista a) {
@@ -613,10 +652,13 @@ public class GestorBBDD {
 
 		}
 	}
+
 	/**
-	 * Modifica la información de un objeto Disco ya construido y actualiza la Base de Datos.
+	 * Modifica la información de un objeto Disco ya construido y actualiza la Base
+	 * de Datos.
+	 * 
 	 * @param aux el nombre de la Disco a modificar
-	 * @param d el objeto Disco que va a ser modificado
+	 * @param d   el objeto Disco que va a ser modificado
 	 */
 	public void modificarDisco(String aux, Disco d) {
 		Connection conn = null;

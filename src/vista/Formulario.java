@@ -11,8 +11,10 @@ import modelo.Cancion;
 import modelo.Cancion.Genero;
 import modelo.Disco;
 import modelo.Interaccion;
+
 /**
  * Gestiona todas las vistas que va a ver el propio usuario.
+ * 
  * @author Pablo, Jonatan y Clara
  *
  */
@@ -127,30 +129,32 @@ public class Formulario {
 
 		} while (aux != 11);
 	}
+
 	/**
 	 * Rellena de información un objeto Canción y lo devuelve construido.
+	 * 
 	 * @return el objeto Cancion
 	 */
 	public Cancion insertarCancion() {
 		Scanner sc = new Scanner(System.in);
 		GestorBBDD gestor = new GestorBBDD();
 		Cancion micancion = new Cancion();
-		int aux=-1;
+		int aux = -1;
 		System.out.print("Dime el nombre de la canción: ");
 		micancion.setNombreCancion(sc.nextLine());
 		// TODO asegurarse que el usuario meta un número
 		System.out.print("¿Cuánto dura? en segundos: ");
 		micancion.setDuracion(sc.nextInt());
-		//sc.nextLine();
+		// sc.nextLine();
 		// TODO: Convertir en un Switch, si el usuario no ha elegido bien el género que
 		// lo vuelva a pedir.
 		System.out.print(
 				"Selecciona un género? (1.ROCK,2.FOLK,3.POP,4.REGGAETON,5.ELECTRÓNICA,6.JAZZ,7.METAL,8.BLUES,9.FUNK,"
-				+ "10.ALTERNATIVO,11.CLASICA,12.AMBIENTE):");
-		
+						+ "10.ALTERNATIVO,11.CLASICA,12.AMBIENTE):");
+
 		do {
-			aux=sc.nextInt();
-			switch(aux){
+			aux = sc.nextInt();
+			switch (aux) {
 			case 1:
 				micancion.setGenero(Genero.ROCK);
 				break;
@@ -184,21 +188,20 @@ public class Formulario {
 			case 11:
 				micancion.setGenero(Genero.CLASICA);
 				break;
-			case 12:	
+			case 12:
 				micancion.setGenero(Genero.AMBIENTE);
 				break;
 			default:
 				System.out.println("No se ha encontrado el género, por favor elija una opción del menú principal");
 				break;
-			}			
-		}while (aux>12 || aux <0);
+			}
+		} while (aux > 12 || aux < 0);
 		sc.nextLine();
-	
+
 		gestor.mostrarArtistas();
 		System.out.print("Dime el artista: ");
 		String artista = sc.nextLine();
 		micancion.setIdArtista(gestor.conseguirArtista(artista));
-	
 
 		gestor.mostrarDiscos();
 		System.out.print("Dime el disco al que pertenece la canción: ");
@@ -207,8 +210,10 @@ public class Formulario {
 
 		return micancion;
 	}
+
 	/**
 	 * Rellena de información un objeto Artista y lo devuelve construido.
+	 * 
 	 * @return el objeto Artista
 	 */
 	public Artista insertarArtista() {
@@ -226,8 +231,10 @@ public class Formulario {
 
 		return miartista;
 	}
+
 	/**
 	 * Rellena de información un objeto Disco y lo devuelve construido.
+	 * 
 	 * @return el objeto Disco
 	 */
 	public Disco insertarDiscos() {
@@ -261,15 +268,18 @@ public class Formulario {
 		}
 		return midisco;
 	}
+
 	/**
-	 * Modifica un objeto Cancion anteriormente construido con nueva información que introduzca el usuario.
+	 * Modifica un objeto Cancion anteriormente construido con nueva información que
+	 * introduzca el usuario.
+	 * 
 	 * @param c el objeto Cancion a modificar
 	 * @return el objeto Cancion modificado
 	 */
 	public Cancion modificarCancion(Cancion c) {
 		Scanner sc = new Scanner(System.in);
 		GestorBBDD gestor = new GestorBBDD();
-		int respuesta=-1;
+		int respuesta = -1;
 
 		System.out.print("Nuevo nombre de la canción: ");
 		c.setNombreCancion(sc.nextLine());
@@ -280,10 +290,10 @@ public class Formulario {
 
 		System.out.print(
 				"¿Cuál es su nuevo género? (ROCK,FOLK,POP,REGGAETON,ELECTRÓNICA,JAZZ,METAL,BLUES,FUNK,ALTERNATIVO,CLASICA,AMBIENTE):");
-		
+
 		do {
-			respuesta=sc.nextInt();
-			switch(respuesta){
+			respuesta = sc.nextInt();
+			switch (respuesta) {
 			case 1:
 				c.setGenero(Genero.ROCK);
 				break;
@@ -317,14 +327,14 @@ public class Formulario {
 			case 11:
 				c.setGenero(Genero.CLASICA);
 				break;
-			case 12:	
+			case 12:
 				c.setGenero(Genero.AMBIENTE);
 				break;
 			default:
 				System.out.println("No se ha encontrado el género, por favor elija una opción del menú principal.");
 				break;
-			}			
-		}while (respuesta>12 || respuesta <0);
+			}
+		} while (respuesta > 12 || respuesta < 0);
 		sc.nextLine();
 
 		gestor.mostrarArtistas();
@@ -339,8 +349,11 @@ public class Formulario {
 
 		return c;
 	}
+
 	/**
-	 * Modifica un objeto Artista anteriormente construido con nueva información que introduzca el usuario.
+	 * Modifica un objeto Artista anteriormente construido con nueva información que
+	 * introduzca el usuario.
+	 * 
 	 * @param a el objeto Artista a modificar
 	 * @return el objeto Artista modificado
 	 */
@@ -361,8 +374,11 @@ public class Formulario {
 
 		return a;
 	}
+
 	/**
-	 * Modifica un objeto Disco anteriormente construido con nueva información que introduzca el usuario.
+	 * Modifica un objeto Disco anteriormente construido con nueva información que
+	 * introduzca el usuario.
+	 * 
 	 * @param d el objeto Disco a modificar
 	 * @return el objeto Disco modificado
 	 */

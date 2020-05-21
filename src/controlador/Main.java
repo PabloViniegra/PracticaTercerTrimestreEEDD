@@ -4,14 +4,17 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import vista.Formulario;
+
 /**
  * Lleva el main de la Aplicación y por tanto el arranque.
+ * 
  * @author Pablo, Jonatan y Clara
  *
  */
 public class Main {
 	/**
 	 * LLama al menú de la Aplicación.
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
