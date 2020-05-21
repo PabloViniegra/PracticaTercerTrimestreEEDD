@@ -300,6 +300,7 @@ public class Formulario {
 	public Cancion modificarCancion(Cancion c) {
 		Scanner sc = new Scanner(System.in);
 		GestorBBDD gestor = new GestorBBDD();
+		int respuesta=-1;
 
 		System.out.print("Nuevo nombre de la canción: ");
 		c.setNombreCancion(sc.nextLine());
@@ -310,8 +311,54 @@ public class Formulario {
 
 		System.out.print(
 				"¿Cuál es su nuevo género? (ROCK,FOLK,POP,REGGAETON,ELECTRÓNICA,JAZZ,METAL,BLUES,FUNK,ALTERNATIVO,CLASICA,AMBIENTE):");
-		String respuesta = sc.nextLine();
-		if (respuesta.equalsIgnoreCase(Genero.ROCK.toString())) {
+		
+		
+		do {
+			respuesta=sc.nextInt();
+			switch(respuesta){
+			case 1:
+				c.setGenero(Genero.ROCK);
+				break;
+			case 2:
+				c.setGenero(Genero.FOLK);
+				break;
+			case 3:
+				c.setGenero(Genero.POP);
+				break;
+			case 4:
+				c.setGenero(Genero.REGGAETON);
+				break;
+			case 5:
+				c.setGenero(Genero.ELECTRÓNICA);
+				break;
+			case 6:
+				c.setGenero(Genero.JAZZ);
+				break;
+			case 7:
+				c.setGenero(Genero.METAL);
+				break;
+			case 8:
+				c.setGenero(Genero.BLUES);
+				break;
+			case 9:
+				c.setGenero(Genero.FUNK);
+				break;
+			case 10:
+				c.setGenero(Genero.ALTERNATIVO);
+				break;
+			case 11:
+				c.setGenero(Genero.CLASICA);
+				break;
+			case 12:	
+				c.setGenero(Genero.AMBIENTE);
+				break;
+			default:
+				System.out.println("No se ha encontrado el género, por favor elija una opción del menú principal.");
+				break;
+			}			
+		}while (respuesta>12 || respuesta <0);
+		sc.nextLine();
+		/*if (respuesta.equalsIgnoreCase(Genero.ROCK.toString())) {
 			c.setGenero(Genero.ROCK);
 		} else if (respuesta.equalsIgnoreCase(Genero.FOLK.toString())) {
 			c.setGenero(Genero.FOLK);
@@ -339,7 +386,7 @@ public class Formulario {
 			c.setGenero(Genero.AMBIENTE);
 		} else {
 			System.out.println("No se ha encontrado el género, por favor revise los géneros que se pueden introducir.");
-		}
+		}*/
 
 		gestor.mostrarArtistas();
 		System.out.print("Nuevo artista: ");
