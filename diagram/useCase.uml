@@ -3,35 +3,48 @@
   <packageImport xmi:type="uml:PackageImport" xmi:id="_SgKE4Jm5EeqCa6A6YzUIsg">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_cTwF4Jm5EeqCa6A6YzUIsg" name="Usuario"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_eSEMsJm5EeqCa6A6YzUIsg" name="Insertar">
-    <include xmi:type="uml:Include" xmi:id="_0sFGMJm6EeqCa6A6YzUIsg" addition="_Tt_7kJm6EeqCa6A6YzUIsg"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_yV460Jw_EeqAy_bKBjo7Qw" name="App">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3ShM4Jw_EeqAy_bKBjo7Qw" name="Llenar los campos"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3Shz8Jw_EeqAy_bKBjo7Qw" name="Salir">
+      <include xmi:type="uml:Include" xmi:id="_3Shz8Zw_EeqAy_bKBjo7Qw" addition="_3ShM4Jw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_r7TnkJxAEeqAy_bKBjo7Qw" addition="_3ShM4Jw_EeqAy_bKBjo7Qw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3Shz8pw_EeqAy_bKBjo7Qw" name="Modificar">
+      <include xmi:type="uml:Include" xmi:id="_3Shz85w_EeqAy_bKBjo7Qw" addition="_3ShM4Jw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_t_KVsJxAEeqAy_bKBjo7Qw" addition="_3ShM4Jw_EeqAy_bKBjo7Qw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3Shz9Jw_EeqAy_bKBjo7Qw" name="Visualizar">
+      <include xmi:type="uml:Include" xmi:id="_3SibAJw_EeqAy_bKBjo7Qw" addition="_3ShM4Jw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_tD5AQJxAEeqAy_bKBjo7Qw" addition="_3ShM4Jw_EeqAy_bKBjo7Qw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3SibAZw_EeqAy_bKBjo7Qw" name="Menu">
+      <include xmi:type="uml:Include" xmi:id="_3SibApw_EeqAy_bKBjo7Qw" addition="_3SibCZw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_3SibA5w_EeqAy_bKBjo7Qw" addition="_3Shz8Jw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_3SibBJw_EeqAy_bKBjo7Qw" addition="_3SibB5w_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_3SibBZw_EeqAy_bKBjo7Qw" addition="_3Shz8pw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_3SibBpw_EeqAy_bKBjo7Qw" addition="_3Shz9Jw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_h9c3UJxAEeqAy_bKBjo7Qw" addition="_3SibB5w_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_juq9UJxAEeqAy_bKBjo7Qw" addition="_3SibCZw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_k6ugwJxAEeqAy_bKBjo7Qw" addition="_3Shz8Jw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_mClgsJxAEeqAy_bKBjo7Qw" addition="_3Shz8pw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_npzWIJxAEeqAy_bKBjo7Qw" addition="_3Shz9Jw_EeqAy_bKBjo7Qw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3SibB5w_EeqAy_bKBjo7Qw" name="Borrar">
+      <include xmi:type="uml:Include" xmi:id="_3SibCJw_EeqAy_bKBjo7Qw" addition="_3ShM4Jw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_uuUhwJxAEeqAy_bKBjo7Qw" addition="_3ShM4Jw_EeqAy_bKBjo7Qw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3SibCZw_EeqAy_bKBjo7Qw" name="Insertar">
+      <include xmi:type="uml:Include" xmi:id="_3SibCpw_EeqAy_bKBjo7Qw" addition="_3ShM4Jw_EeqAy_bKBjo7Qw"/>
+      <include xmi:type="uml:Include" xmi:id="_o4hMAJxAEeqAy_bKBjo7Qw" addition="_3ShM4Jw_EeqAy_bKBjo7Qw"/>
+    </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_equkUJm5EeqCa6A6YzUIsg" name="Modificar">
-    <include xmi:type="uml:Include" xmi:id="_1h1CcJm6EeqCa6A6YzUIsg" addition="_Tt_7kJm6EeqCa6A6YzUIsg"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_gF3FkJm5EeqCa6A6YzUIsg" name="Borrar">
-    <include xmi:type="uml:Include" xmi:id="_2PFxEJm6EeqCa6A6YzUIsg" addition="_Tt_7kJm6EeqCa6A6YzUIsg"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_hFRUIJm5EeqCa6A6YzUIsg" name="Visualizar">
-    <include xmi:type="uml:Include" xmi:id="_3BYwsJm6EeqCa6A6YzUIsg" addition="_Tt_7kJm6EeqCa6A6YzUIsg"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_xzPtUJm5EeqCa6A6YzUIsg" name="Salir">
-    <include xmi:type="uml:Include" xmi:id="_32CgwJm6EeqCa6A6YzUIsg" addition="_Tt_7kJm6EeqCa6A6YzUIsg"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_Tt_7kJm6EeqCa6A6YzUIsg" name="Llenar los campos"/>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_YFI68Jm6EeqCa6A6YzUIsg" name="Menu">
-    <include xmi:type="uml:Include" xmi:id="_qL99cJm6EeqCa6A6YzUIsg" addition="_eSEMsJm5EeqCa6A6YzUIsg"/>
-    <include xmi:type="uml:Include" xmi:id="_t0390Jm6EeqCa6A6YzUIsg" addition="_xzPtUJm5EeqCa6A6YzUIsg"/>
-    <include xmi:type="uml:Include" xmi:id="_winWcJm6EeqCa6A6YzUIsg" addition="_gF3FkJm5EeqCa6A6YzUIsg"/>
-    <include xmi:type="uml:Include" xmi:id="_yN0UAJm6EeqCa6A6YzUIsg" addition="_equkUJm5EeqCa6A6YzUIsg"/>
-    <include xmi:type="uml:Include" xmi:id="_zLAVAJm6EeqCa6A6YzUIsg" addition="_hFRUIJm5EeqCa6A6YzUIsg"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_b7I8IJm6EeqCa6A6YzUIsg" memberEnd="_b7ao8Jm6EeqCa6A6YzUIsg _b7ao8Zm6EeqCa6A6YzUIsg">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b7YzwJm6EeqCa6A6YzUIsg" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_b7Za0Jm6EeqCa6A6YzUIsg" key="nature" value="UML_Nature"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_F2TmcJxAEeqAy_bKBjo7Qw" name="CopyOf_Usuario_11"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_JG_UEJxAEeqAy_bKBjo7Qw" name="Usuario"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_22h_AJxAEeqAy_bKBjo7Qw" memberEnd="_22jNIpxAEeqAy_bKBjo7Qw _22jNI5xAEeqAy_bKBjo7Qw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_22jNIJxAEeqAy_bKBjo7Qw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_22jNIZxAEeqAy_bKBjo7Qw" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_b7ao8Jm6EeqCa6A6YzUIsg" name="menu" type="_YFI68Jm6EeqCa6A6YzUIsg" association="_b7I8IJm6EeqCa6A6YzUIsg"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_b7ao8Zm6EeqCa6A6YzUIsg" name="usuario" type="_cTwF4Jm5EeqCa6A6YzUIsg" association="_b7I8IJm6EeqCa6A6YzUIsg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_22jNIpxAEeqAy_bKBjo7Qw" name="menu" type="_3SibAZw_EeqAy_bKBjo7Qw" association="_22h_AJxAEeqAy_bKBjo7Qw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_22jNI5xAEeqAy_bKBjo7Qw" name="usuario" type="_JG_UEJxAEeqAy_bKBjo7Qw" association="_22h_AJxAEeqAy_bKBjo7Qw"/>
   </packagedElement>
 </uml:Model>
