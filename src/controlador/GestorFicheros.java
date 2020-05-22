@@ -37,17 +37,17 @@ public class GestorFicheros {
 			escribir.write("</head> \n");
 			escribir.write("<body> \n");
 			escribir.write("<table style=\"text-align:center;display:flex;justify-content:center \" border=\"1\"> \n");
-			escribir.write("<tr><th>Nombre del Artista</th><th>Fundación</th><th>Número de Integrantes</th>"
-					+ "<th>Nombre del Disco</th><th>Precio</th><th>Imagen de la Portada</th><th>Nombre de la Canción</th>"
-					+ "<th>Duracion</th><th>Género</th></tr>");
+			escribir.write("<tr><th>Nombre del Artista</th><th>Fundacion</th><th>Numero de Integrantes</th>"
+					+ "<th>Nombre del Disco</th><th>Precio</th><th>Imagen de la Portada</th><th>Nombre de la Cancion</th>"
+					+ "<th>Duracion</th><th>Genero</th></tr>");
 
 			for (Interaccion i : miArray) {
 				escribir.write("<tr> \n");
 				escribir.write("<td>" + i.getNombreArtista() + "</td><td>" + i.getAnioCreacion() + "</td><td>"
-						+ i.getNumIntegrantes() + "</td><td>" + i.getNombreDisco() + "</td><td>" + i.getPrecio() + "€"
+						+ i.getNumIntegrantes() + "</td><td>" + i.getNombreDisco() + "</td><td>" + i.getPrecio() + " euros"
 						+ "</td><td><img src=\"img/" + i.getImgPortada() + "\""
 						+ " width=\"100px\" height=\"100px\"></td><td>" + i.getNombreCancion() + "</td><td>"
-						+ i.getDuracion() + " minutos" + "</td><td>" + i.getGenero() + "</td> \n");
+						+ i.getDuracion() + " segundos" + "</td><td>" + i.getGenero() + "</td> \n");
 				escribir.write("</tr> \n");
 
 			}
