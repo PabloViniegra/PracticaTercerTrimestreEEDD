@@ -117,6 +117,7 @@ public class Formulario {
 				break;
 			case 11:
 				System.out.println("¡Hasta pronto!");
+				break;
 			default:
 				System.out.println("Opción incorrecta!, pulse una tecla para continuar");
 
@@ -289,7 +290,7 @@ public class Formulario {
 		sc.nextLine();
 
 		System.out.print(
-				"¿Cuál es su nuevo género? (ROCK,FOLK,POP,REGGAETON,ELECTRÓNICA,JAZZ,METAL,BLUES,FUNK,ALTERNATIVO,CLASICA,AMBIENTE):");
+				"¿Cuál es su nuevo género? (1.ROCK,2.FOLK,3.POP,4.REGGAETON,5.ELECTRÓNICA,6.JAZZ,7.METAL,8.BLUES,9.FUNK,10.ALTERNATIVO,11.CLASICA,12.AMBIENTE):");
 
 		do {
 			respuesta = sc.nextInt();
