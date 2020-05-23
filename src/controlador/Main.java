@@ -18,7 +18,7 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
+		System.out.println("[Recuerda que necesitas primero artistas y discos para introducir canciones.]");
 		Scanner sc = new Scanner(System.in);
 		Formulario f = new Formulario();
 		boolean check = true;
